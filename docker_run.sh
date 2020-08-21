@@ -11,7 +11,7 @@ docker run -d \
     -p 53:53/tcp -p 53:53/udp \
     -p 80:80 \
     -p 443:443 \
-    -e TZ="America/Chicago" \
+    -e TZ="America/New_York" \
     -v "${PIHOLE_BASE}/etc-pihole/:/etc/pihole/" \
     -v "${PIHOLE_BASE}/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
     --dns=127.0.0.1 --dns=1.1.1.1 \
@@ -19,7 +19,7 @@ docker run -d \
     --hostname pi.hole \
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
-    -e ServerIP="127.0.0.1" \
+    -e ServerIP="99.23.159.105" \
     pihole/pihole:latest
 
 printf 'Starting up pihole container '
